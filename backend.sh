@@ -38,8 +38,8 @@ VALIDATE $? "enabling node 20 "
 dnf install nodejs -y &>>$LOG_FILE
 VALIDATE $? "installing nodejs"
 
-id expense
-if [ $? -eq 0 ]
+id expense &>>$LOG_FILE
+if [  $? -eq 0 ]
 then
     echo -e "$G user already existed $N"
 else
